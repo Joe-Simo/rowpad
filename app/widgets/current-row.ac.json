@@ -1,0 +1,30 @@
+{
+  "type": "AdaptiveCard",
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.5",
+  "body": [
+    { "type": "TextBlock", "text": "${title}", "weight": "Bolder", "size": "Medium", "wrap": false },
+    { "type": "TextBlock", "text": "${subtitle}", "isSubtle": true, "spacing": "None", "wrap": true, "$when": "${subtitle != ''}" },
+    {
+      "type": "Container",
+      "spacing": "Medium",
+      "$when": "${hasData}",
+      "items": [
+        {
+          "type": "ColumnSet",
+          "columns": [
+            { "type": "Column", "width": "auto", "verticalContentAlignment": "Bottom", "items": [{ "type": "TextBlock", "text": "${row}", "size": "ExtraLarge", "weight": "Bolder" }] },
+            { "type": "Column", "width": "stretch", "verticalContentAlignment": "Bottom", "items": [{ "type": "TextBlock", "text": "${rowLabel}", "isSubtle": true }] }
+          ]
+        },
+        { "type": "TextBlock", "text": "${repeatText}", "spacing": "Small", "wrap": true, "$when": "${repeatText != ''}" },
+        { "type": "TextBlock", "text": "${targetText}", "spacing": "None", "wrap": true, "weight": "Bolder", "color": "Accent", "$when": "${targetText != ''}" },
+        { "type": "TextBlock", "text": "${todayText}", "spacing": "Small", "isSubtle": true, "size": "Small", "wrap": true }
+      ]
+    }
+  ],
+  "actions": [
+    { "type": "Action.Execute", "title": "Add row", "verb": "add-row", "$when": "${pro && hasData}" },
+    { "type": "Action.Execute", "title": "Open Rowpad", "verb": "open" }
+  ]
+}

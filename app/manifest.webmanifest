@@ -1,0 +1,153 @@
+{
+  "id": "/rowpad/app/",
+  "name": "Rowpad",
+  "short_name": "Rowpad",
+  "description": "Count knitting and crochet rows on your Windows PC with a big counter, pattern repeats, a row target, and a row marker over a photo of your pattern. Your projects stay on this PC.",
+  "lang": "en-US",
+  "dir": "ltr",
+  "start_url": "/rowpad/app/",
+  "scope": "/rowpad/app/",
+  "display": "standalone",
+  "display_override": [
+    "window-controls-overlay",
+    "standalone"
+  ],
+  "orientation": "any",
+  "theme_color": "#6a2459",
+  "background_color": "#f6eef3",
+  "categories": [
+    "lifestyle",
+    "productivity",
+    "utilities"
+  ],
+  "icons": [
+    {
+      "src": "icons/icon-16.png",
+      "sizes": "16x16",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-20.png",
+      "sizes": "20x20",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-24.png",
+      "sizes": "24x24",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-32.png",
+      "sizes": "32x32",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-40.png",
+      "sizes": "40x40",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-48.png",
+      "sizes": "48x48",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-64.png",
+      "sizes": "64x64",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-256.png",
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Start a new project",
+      "short_name": "New project",
+      "url": "/rowpad/app/?new",
+      "icons": [
+        {
+          "src": "icons/icon-96.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "widgets": [
+    {
+      "name": "Rowpad: Current row",
+      "short_name": "Current row",
+      "description": "Your current project's row count, repeat, and target, with a button to add a row.",
+      "tag": "current-row",
+      "template": "rowpad-current-row",
+      "ms_ac_template": "widgets/current-row.ac.json",
+      "data": "widgets/current-row-data.json",
+      "type": "application/json",
+      "screenshots": [
+        {
+          "src": "widgets/screenshot-current-row.png",
+          "sizes": "600x400",
+          "label": "The Current row widget"
+        }
+      ],
+      "icons": [
+        {
+          "src": "icons/icon-48.png",
+          "sizes": "48x48"
+        }
+      ],
+      "auth": false,
+      "update": 21600,
+      "multiple": false
+    }
+  ],
+  "launch_handler": {
+    "client_mode": "focus-existing"
+  }
+}
